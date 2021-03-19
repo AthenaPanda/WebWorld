@@ -39,3 +39,16 @@ console.log(str2);
 
 var str3 = str2.slice(2, 5);
 console.log(str3);
+
+let s1 = Symbol("str1");
+var s2 = s1.toString();
+
+console.log(s2);
+
+const s3 = Symbol('test1');
+
+let obj = {
+    [s3]: 'data'
+};
+
+console.log(obj[s3]);
