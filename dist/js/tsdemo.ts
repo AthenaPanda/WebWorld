@@ -10,6 +10,7 @@ class Student {
 interface Person{
     firstName : string;
     lastName: string;
+    age?: number;
 }
 
 
@@ -20,4 +21,18 @@ function greeter(person): string {
 
 let User  = new Student("Jane" , "M" ,"User");
 document.body.innerHTML = greeter(User);
+
+interface ClockInterface {
+    currentTime: Date;
+    setTime(da: Date);
+}
+
+class Clock implements ClockInterface {
+    currentTime: Date;
+    setTime(da: Date){
+        this.currentTime = da;
+    }
+
+    constructor(h: number, m: number){}
+}
 
