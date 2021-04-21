@@ -1,0 +1,5 @@
+.testShadow {
+    text-shadow: 5px 5px 5px gray,30px 30px 0px gold;
+                
+    left: 30%;
+}
