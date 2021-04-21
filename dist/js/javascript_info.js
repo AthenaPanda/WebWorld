@@ -52,3 +52,44 @@ let obj = {
 };
 
 console.log(obj[s3]);
+
+var getResult = (function(){
+    var res = 4;
+    return function() {
+        return res;
+    };
+}());
+
+console.log(getResult());
+
+var memto = function(state){
+    var _state = state;
+    this.getState = function(){
+        return _state;
+    }
+};
+
+var orig = function(){
+    var _state;
+    this.setState = function(){
+        
+    };
+
+};
+
+function f(x, y) {
+    return {x, y};
+}
+
+let ms = {};
+
+function getItem(key) {
+    return key in ms? ms[key] : null;
+}
+
+function setItem(key, value) {
+    ms[key] = value;
+}
+
+var docURI = document.baseURI;
+console.log(docURI);
