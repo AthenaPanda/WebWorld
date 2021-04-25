@@ -3,6 +3,8 @@
     <head>
         <title>Vue Demo</title>
         <meta charset="utf-8">
+        <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>
+        <script src="./dist/js/lodash.min.js"></script>
         <script src="./dist/js/vue.js"></script>
         
     </head>
@@ -15,8 +17,31 @@
         </div>
         <div id="app-3">
             <p v-if="seen">show now or not</p>
+            <p>message:{{ newHtml }}</p>
+            <P>{{ reverseMessage }}</P>
         </div>
+    <!--
+        <div id="watch_example">
+            <p>
+                Yes/No 
+                <input v-model="question">
+            </p>
+            <p>{{ answer }}</p>
+        </div>
+    -->
+    <div id="components-demo">
+        <my-component></my-component>
+    </div>
         <script>
+            Vue.component("my-component", {
+                data: function() {
+                    return {
+                        count: 0
+                    }
+                },
+                template:'<button v-on:click="count++">You clicked me {{ count }} times.</button>'
+            });
+
             var app = new Vue({
                 el: '#app',
                 data: {
@@ -29,7 +54,60 @@
                 data: {
                     message1: 'load time '+ new Date().toLocaleString()
                 }
-            })
+            });
+
+            var app3 = new Vue({
+                el: '#app-3',
+                data: {
+                    seen: true,
+                    newHtml: "<span>new html</span>",
+                    messag2: "1 2 3"
+                },
+
+                computed: {
+                    reverseMessage: function() {
+                        return this.messag2.split('').reverse().join('')
+                    }
+                }
+            });
+            
+            var vmComponet = new Vue({
+                el: '#components-demo'
+            });
+
+            /*var watchEx = new Vue({
+                el: '#watch_example',
+                data: {
+                    question: '',
+                    answer: 'no answer'
+                },
+
+                watch: {
+                    question: function(newQuestion, oldQuestion) {
+                        this.answer = "wating your answer"
+                        this.debouncedGetAnswer()
+                    }
+                },
+
+                created: function() {
+                    this.debouncedGetAnswer = _.debounce(this.get)
+                },
+
+                methods: {
+                    getAnswer: function() {
+                        if(this.question.indexOf('?') === -1) {
+                            this.answer = 'question contain a mask'
+                            return
+                        }
+
+                        this.answer = 'thinking'
+                        var vm = this
+                        axios.get(''https://yesno.wtf/api'')
+                            .then()
+                    }
+                }
+
+            })*/
         </script>
     </body>
 </html>
