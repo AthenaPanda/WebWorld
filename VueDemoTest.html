@@ -32,6 +32,9 @@
     <div id="components-demo">
         <my-component></my-component>
     </div>
+    <div id="app-4">
+        <btn-test></btn-test>
+    </div>
         <script>
             Vue.component("my-component", {
                 data: function() {
@@ -73,6 +76,25 @@
             
             var vmComponet = new Vue({
                 el: '#components-demo'
+            });
+
+            var myComponentA = {
+                data: function() {
+                    return {
+                        count: 1
+                    }
+                },
+                template: '<button v-on:click="count++">You clicked me {{ count }} times. Second Test</button>'
+            };
+
+            var app3 = new Vue({
+                el: '#app-4',
+                data : {
+
+                },
+                components :{
+                    'btn-test': myComponentA
+                }
             });
 
             /*var watchEx = new Vue({
