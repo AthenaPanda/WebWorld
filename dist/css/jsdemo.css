@@ -3,3 +3,107 @@
                 
     left: 30%;
 }
+
+
+
+@media all {
+    h1 {
+        background-color: white;
+        font-family: cursive;
+    }
+}
+
+p[class="test demo"] {
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+p[class|="demo"] {
+    background-color: aqua;
+    color: black;
+}
+
+p[class~="test"] {
+    font-style: italic;
+}
+
+span[class*="cloud"] {
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+div > p {
+    font-weight: bold;
+}
+
+a[href="www.test.html"]:hover {
+    color: rgba(0, 255, 255, 0.8);
+    background-color: hsla(182, 50%, 48%, 0.678);
+}
+
+p.test-indent {
+    text-indent: 5em;
+    vertical-align: sub;
+    word-spacing: normal;
+    text-transform: capitalize;
+}
+
+span.TEST1 {
+    vertical-align: bottom;
+}
+
+a {
+    text-decoration: underline;
+}
+
+p.test-space {
+    white-space: nowrap;
+}
+
+ul {margin-bottom: 15px;}
+
+li {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    list-style-position: outside;
+    background-color: aqua;
+}
+
+img {
+    height: 50px;
+    width: 50px;
+}
+
+img.one {
+    margin: 10px;
+    padding: 10px;
+    border: 5px ridge;
+    border-radius: 1em 2em/ 2em 3em;
+}
+
+div.test-clip {
+    background-color: brown;
+    background-clip: border-box;
+    background-image: url(./../../src/image/209974.jpg);
+    background-position: center;
+    background-origin: border-box;
+    background-repeat: repeat-x;
+    background-size: 20px 20px;
+}
+
+
+div.test-line {
+    background-image: linear-gradient(90deg, red, yellow 25px, 60%, green, blue);
+}
+
+div.test-radius {
+    background-image: -webkit-radial-gradient(ellipse,  purple,gold);
+    height: 400px;
+
+}
+
+img.test-float {
+    float: right;
+    shape-outside: inset(20%)  border-box;
+
+}

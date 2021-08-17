@@ -3,6 +3,15 @@ $(document).ready(function(){
     $(".showletcode").click(function() {
         $(".letcode").toggle();
     });
+
+    var $cr = $("#cr");
+    var cr = $cr[0];
+
+    $cr.click(function(){
+        if(cr.checked) {
+            console.log("Test Dom");
+        }
+    });
 });
 
 var arr1 =new Array('Bob', 'Tom', 'Jane');
@@ -93,3 +102,16 @@ function setItem(key, value) {
 
 var docURI = document.baseURI;
 console.log(docURI);
+
+
+const pr1 = new Promise(function(resolve, reject){
+    console.log("start promisze");
+});
+
+pr1.then(function(){
+    console.log("suc");
+}, function(){
+    console.log("fail");
+});
+
+console.log("start js");
