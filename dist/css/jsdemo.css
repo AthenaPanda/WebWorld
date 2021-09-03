@@ -126,3 +126,31 @@ a:hover, a:focus, a:active {
     background-color: #ffcc22;
     color: black;
 }
+
+div.navigation {
+    display: flex;
+    width: 300px;
+    margin: 10em;
+    /*justify-content: space-around;*/
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+div.navigation  p {
+    margin: 2px;
+    background-color: aqua;
+}
+
+nav a:hover {
+    order: -1;
+    background-color: burlywood;
+}
+
+div.grid-test {
+    display: grid;
+    grid-template-rows: minmax() minmax() minmax();
+    grid-template-columns: 100px 1fr 100px;
+    /*grid-template-areas: "h h h h"
+                         "l c c r"
+                         "l f f f";*/
+}
