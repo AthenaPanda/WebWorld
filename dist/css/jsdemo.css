@@ -154,3 +154,38 @@ div.grid-test {
                          "l c c r"
                          "l f f f";*/
 }
+
+table.test {
+    table-layout: auto;
+    width: auto;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid ;
+    padding: 0;
+}
+
+col#c3 {
+    width: 25%;
+}
+
+#r1c1 {
+    width: 40%;
+}
+
+#r2c2 {
+    width: 50px;
+}
+
+#r2c3 {
+    width: 35px;
+}
+
+#r4c1 {
+    width: 100px;
+}
+
+#r4c4 {
+    width: 1px;
+}
