@@ -189,3 +189,13 @@ col#c3 {
 #r4c4 {
     width: 1px;
 }
+
+/*@counter-style emoji{
+    system: fixed;
+    symbols: ;
+}*/
+
+#canva {
+    width: 400px;
+    height: 400px;
+}
